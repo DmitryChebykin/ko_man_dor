@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
-   <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-         <children>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="com.example.komandor.controller.MainController">
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
             <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Text fx:id="header" strokeType="OUTSIDE" strokeWidth="0.0" text="Эмулятор кофемашины" wrappingWidth="239.13671875" />
-               </children></HBox>
-            <TableView prefHeight="200.0" prefWidth="200.0">
-              <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
-              </columns>
+                <Text fx:id="header" strokeType="OUTSIDE" strokeWidth="0.0" text="Эмулятор торгового киоска"
+                      wrappingWidth="239.13671875"/>
+            </HBox>
+            <TableView fx:id="productTable" prefHeight="200.0" prefWidth="200.0">
+                <columns>
+                    <TableColumn fx:id="goodId" prefWidth="75.0" text="ID товара"/>
+                    <TableColumn fx:id="name" prefWidth="75.0" text="Наименование товара"/>
+                    <TableColumn fx:id="description" prefWidth="75.0" text="Описание товара"/>
+                    <TableColumn fx:id="price" prefWidth="75.0" text="Цена товара"/>
+                </columns>
             </TableView>
-         </children>
-      </VBox>
-   </center>
+        </VBox>
+    </center>
 </BorderPane>
