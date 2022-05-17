@@ -1,0 +1,1 @@
+Для запуска тестов потребуется Docker (Docker Desktop), используется TestContainera
