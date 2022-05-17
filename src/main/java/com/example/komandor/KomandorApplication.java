@@ -1,5 +1,6 @@
 package com.example.komandor;
 
+import com.example.komandor.application.FxApplication;
 import javafx.application.Application;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
