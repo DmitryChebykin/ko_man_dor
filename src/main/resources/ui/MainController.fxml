@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="929.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.komandor.controller.MainController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="929.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.komandor.controller.MainController">
     <center>
-        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+        <VBox prefHeight="763.0" prefWidth="929.0" BorderPane.alignment="CENTER">
             <HBox prefHeight="100.0" prefWidth="200.0">
                 <Text fx:id="header" strokeType="OUTSIDE" strokeWidth="0.0" text="Эмулятор торгового киоска" wrappingWidth="239.13671875" />
             <TextField fx:id="searchBox" prefHeight="26.0" prefWidth="352.0" promptText="введите наименование товара" />
@@ -25,10 +25,17 @@
                     <TableColumn fx:id="price" prefWidth="75.0" text="Цена товара" />
                 </columns>
             </TableView>
-         <HBox prefHeight="100.0" prefWidth="200.0" />
+         <HBox prefHeight="50.0" prefWidth="929.0" />
          <HBox prefHeight="36.0" prefWidth="929.0">
             <children>
                <Button mnemonicParsing="false" onAction="#addBasketRow" text="В корзину" />
+               <Button mnemonicParsing="false" onAction="#clearBasket" prefHeight="50.0" prefWidth="150.0" text="очистить ">
+                  <HBox.margin>
+                     <Insets left="20.0" right="20.0" />
+                  </HBox.margin>
+               </Button>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="К оплате" wrappingWidth="160.9830722808838" />
+               <Text fx:id="totalPayment" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="192.9831027984619" />
             </children>
          </HBox>
          <TableView fx:id="basketTable" prefHeight="200.0" prefWidth="789.0">
@@ -37,13 +44,13 @@
                <TableColumn fx:id="basketName" prefWidth="75.0" text="Наименование товара" />
                <TableColumn fx:id="basketPrice" prefWidth="75.0" text="Цена товара" />
                <TableColumn fx:id="basketCount" prefWidth="106.0" text="Количество" />
-               <TableColumn fx:id="basketTotal" prefWidth="131.0" text="Сумма" />
+               <TableColumn fx:id="basketTotalPrice" prefWidth="131.0" text="Сумма" />
             </columns>
          </TableView>
-         <HBox prefHeight="69.0" prefWidth="929.0">
+         <HBox prefHeight="89.0" prefWidth="929.0">
             <children>
-               <TextField />
-               <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="108.0" text="Оплатить">
+               <TextField fx:id="paymentSum"/>
+               <Button fx:id="paymentButton" onAction="#doPayment" mnemonicParsing="false" prefHeight="32.0" prefWidth="108.0" text="Оплатить">
                   <opaqueInsets>
                      <Insets />
                   </opaqueInsets>
